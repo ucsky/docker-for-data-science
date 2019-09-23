@@ -1,0 +1,33 @@
+version: '3.1'
+services:
+  jupyter:
+    image: jupyter/datascience-notebook
+    container_name: jupyter
+    volumes:
+      - './notebook:/home/jovyan/work'
+    ports:
+      - '8888:8888'
+    links:
+      - postgres
+      - redis
+
+  postgres:
+    image: postgres
+    container_name: postgres
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init:/docker-entrypoint-initdb.d
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+
+
+volumes:
+  pgdata:
+  redisdata:

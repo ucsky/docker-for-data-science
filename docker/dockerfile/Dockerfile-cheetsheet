@@ -1,0 +1,9 @@
+FROM - sets base image
+LABEL - adds metadata to image
+COPY - copies files / directories into image
+ENV - sets environment variable
+WORKDIR - sets working directory
+RUN - executes shell commands in a new layer
+ENTRYPOINT - configures container to run as executable
+CMD - provides default for executing container
+
