@@ -17,6 +17,9 @@ docker run \
     --env POSTGRES_PASSWORD=password \
     postgres
 
+#Inspect postgres database
+docker exec -it postgres psql -U postgres
+
 # Run a 'detached' container.
 docker run \
     --rm \

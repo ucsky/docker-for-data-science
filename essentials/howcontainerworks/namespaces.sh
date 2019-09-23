@@ -17,6 +17,10 @@ ps aux | grep sleep
 
 #Docker run nginx
 docker container run -d -p 8888:80 nginx
+docker container run -d -p 80:80 nginx
+
+#Error using same port
+docker container run -d -p 80:80 nginx
 
 netstat -plnt
 

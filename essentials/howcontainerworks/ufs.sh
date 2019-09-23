@@ -8,3 +8,4 @@ docker pull nginx:stable
 docker inspect
 
 #show file created on read-write layer
+#create a test file and show it in the merged layer

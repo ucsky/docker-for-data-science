@@ -6,7 +6,9 @@
 nproc
 
 #Run a busybox container with 1 cpu
-    docker run --cpuset-cpus 3 -it busybox
+#CPUs in which to allow execution
+docker run --cpuset-cpus 3 -it busybox
+
 nproc
 
 #Memory
