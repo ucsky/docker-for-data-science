@@ -10,4 +10,4 @@ def predict():
 	model.fit(data.as_matrix(['FloorSpace']), data.as_matrix(['Price']))
 	return 'Price of a %d sq feet house %f thousand dollars' % (sqmtr, model.predict([[sqmtr]])[0][0])
 if __name__ == '__main__':
-	app.run(debug=True,host='0.0.0.0',port=8888)
+	app.run(debug=True,host='0.0.0.0',port=8890)

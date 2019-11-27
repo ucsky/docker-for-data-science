@@ -8,4 +8,4 @@ WORKDIR /app
 COPY hello.py /app
 
 # Run hello_world.py when the container launches
-CMD ["python", "hello_world.py"]
+CMD ["python", "hello.py"]
